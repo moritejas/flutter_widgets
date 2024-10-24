@@ -7,9 +7,38 @@ class PageViewComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text('PageView Example'),
       ),
-      body: const Center(
-        child: Text("Welcome to Flutter Application "),
+      body: PageView(
+        children: [
+          Container(
+            color: Colors.red,
+            child: const Center(
+              child: Text(
+                'Page 1',
+                style: TextStyle(fontSize: 24, color: Colors.white),
+              ),
+            ),
+          ),
+          Container(
+            color: Colors.green,
+            child: const Center(
+              child: Text(
+                'Page 2',
+                style: TextStyle(fontSize: 24, color: Colors.white),
+              ),
+            ),
+          ),
+          Container(
+            color: Colors.blue,
+            child: const Center(
+              child: Text(
+                'Page 3',
+                style: TextStyle(fontSize: 24, color: Colors.white),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
