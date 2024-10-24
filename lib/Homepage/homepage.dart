@@ -9,6 +9,7 @@ import '../Componant/divider.dart';
 import '../Componant/expandable.dart';
 import '../Componant/form_validation.dart';
 import '../Componant/grid_view.dart';
+import '../Componant/image.dart';
 import '../Componant/list_view.dart';
 import '../Componant/page_view.dart';
 import '../Componant/row.dart';
@@ -78,7 +79,7 @@ class _HomepageState extends State<Homepage> {
                     const SizedBox(height: 12),
                     allComponents(name:"Button",page: const ButtonComponent()),
                     const SizedBox(height: 12),
-                    allComponents(name:"Image",page: const ButtonComponent()),
+                    allComponents(name:"Image",page: const ImageComponent()),
                     const SizedBox(height: 12),
                     allComponents(name:"Card",page: const CardComponent()),
                     const SizedBox(height: 12),
@@ -88,11 +89,11 @@ class _HomepageState extends State<Homepage> {
                     const SizedBox(height: 12),
                     allComponents(name:"GridView",page: const GridViewComponent()),
                     const SizedBox(height: 12),
-                    allComponents(name:"Spacer",page: SpacerComponent()),
+                    allComponents(name:"Spacer",page: const SpacerComponent()),
                     const SizedBox(height: 12),
-                    allComponents(name:"Divider",page: DividerComponent()),
+                    allComponents(name:"Divider",page: const DividerComponent()),
                     const SizedBox(height: 12),
-                    allComponents(name:"Vertical Divider",page: VerticalDividerComponent()),
+                    allComponents(name:"Vertical Divider",page: const VerticalDividerComponent()),
                     const SizedBox(height: 12),
                     allComponents(name:"TabBar",page: const TabBarComponent()),
                     const SizedBox(height: 12),

@@ -8,7 +8,7 @@ class CardComponent extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
         ),
-        body: Card(
+        body: const Card(
           child: Text("This is Card Component"),
         )
     );
