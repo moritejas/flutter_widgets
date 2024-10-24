@@ -1,3 +1,11 @@
+import 'package:demo_flutter_flow/Componant/calender.dart';
+import 'package:demo_flutter_flow/Componant/circle_image.dart';
+import 'package:demo_flutter_flow/Componant/flex.dart';
+import 'package:demo_flutter_flow/Componant/icon.dart';
+import 'package:demo_flutter_flow/Componant/listtile.dart';
+import 'package:demo_flutter_flow/Componant/rich_text.dart';
+import 'package:demo_flutter_flow/Componant/slidable_listtile.dart';
+import 'package:demo_flutter_flow/Componant/toggle_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../Componant/button.dart';
@@ -5,10 +13,13 @@ import '../Componant/card.dart';
 import '../Componant/carousel.dart';
 import '../Componant/column.dart';
 import '../Componant/container.dart';
+import '../Componant/data_table.dart';
 import '../Componant/divider.dart';
 import '../Componant/expandable.dart';
+import '../Componant/flippable_card.dart';
 import '../Componant/form_validation.dart';
 import '../Componant/grid_view.dart';
+import '../Componant/icon_button.dart';
 import '../Componant/image.dart';
 import '../Componant/list_view.dart';
 import '../Componant/page_view.dart';
@@ -16,6 +27,7 @@ import '../Componant/row.dart';
 import '../Componant/spacer.dart';
 import '../Componant/stack.dart';
 import '../Componant/staggerediew.dart';
+import '../Componant/swipeable_stack.dart';
 import '../Componant/tabbar.dart';
 import '../Componant/text.dart';
 import '../Componant/vertical_divider.dart';
@@ -90,6 +102,34 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Staggered View", page: StaggeredViewComponent()),
               sizedbox(),
+
+              allComponents(name: "Flippable Card", page: const FlippableCardComponent()),
+              sizedbox(),
+              allComponents(name: "Swipeable Stack", page: const SwipeableStackComponent()),
+              sizedbox(),
+              allComponents(name: "Data Table", page: const DataTableComponent()),
+              sizedbox(),
+              allComponents(name: "Flex", page: const FlexComponent()),
+              sizedbox(),
+              allComponents(name: "Rich Text", page: const RichTextComponent()),
+              sizedbox(),
+              allComponents(name: "Circle Image", page: const CilrcleImageComponent()),
+              sizedbox(),
+              allComponents(name: "Icon", page: const IconComponent()),
+              sizedbox(),
+              allComponents(name: "Icon Button", page: const IconButtonComponent()),
+              sizedbox(),
+              allComponents(name: "ListTile", page: const ListTileComponent()),
+              sizedbox(),
+              allComponents(name: "Slidable ListTile", page: const SlidableListTileComponent()),
+              sizedbox(),
+              // VideoPlayer
+              // Youtube Player
+              allComponents(name: "Calender", page: const CalenderComponent()),
+              sizedbox(),
+              allComponents(name: "Toggle Icon", page: const ToggleIconComponent()),
+
+
             ],
           ),
         ),
