@@ -88,7 +88,7 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Form Validation",page: const FormValidationComponent()),
               sizedbox(),
-              allComponents(name: "Staggered View", page: const StaggeredViewComponent()),
+              allComponents(name: "Staggered View", page: StaggeredViewComponent()),
               sizedbox(),
             ],
           ),
