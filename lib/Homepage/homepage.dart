@@ -99,7 +99,7 @@ class _HomepageState extends State<Homepage> {
                     const SizedBox(height: 12),
                     allComponents(name:"PageView",page: const PageViewComponent()),
                     const SizedBox(height: 12),
-                    allComponents(name:"Carousel",page: const CarouselComponent()),
+                    allComponents(name:"Carousel",page: CarouselComponent()),
                     const SizedBox(height: 12),
                     allComponents(name:"Expandable",page: const ExpandableComponent()),
                     const SizedBox(height: 12),
