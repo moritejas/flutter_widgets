@@ -8,8 +8,26 @@ class RichTextComponent extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
       ),
-      body: const Text("This is Column Component"),
-
+      body:Center(
+        child: RichText(
+          text: const TextSpan(
+            text: 'Hello, ',
+            style: TextStyle(fontSize: 24, color: Colors.black),
+            children: <TextSpan>[
+              TextSpan(
+                text: 'Flutter',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold, color: Colors.blue),
+              ),
+              TextSpan(
+                text: ' Developers!',
+                style: TextStyle(
+                    fontStyle: FontStyle.italic, color: Colors.green),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
