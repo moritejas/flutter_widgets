@@ -52,6 +52,9 @@ dependencies:
 #  Swipeable Card Stack
   swipeable_card_stack: ^0.0.5
 
+#  Slidable LisTile
+  flutter_slidable: ^3.1.1
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
