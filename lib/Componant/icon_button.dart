@@ -8,8 +8,16 @@ class IconButtonComponent extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
       ),
-      body: const Text("This is Column Component"),
-
+      body:IconButton(
+        icon: const Icon(
+          Icons.arrow_back,
+          color: Colors.indigoAccent,
+          size: 24,
+        ),
+        onPressed: () {
+          print('IconButton pressed ...');
+        },
+      ),
     );
   }
 }
