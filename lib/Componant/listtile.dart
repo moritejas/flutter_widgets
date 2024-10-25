@@ -8,7 +8,12 @@ class ListTileComponent extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
       ),
-      body: const Text("This is Column Component"),
+      body: const ListTile(
+        title: Text("Name"),
+        trailing: Icon(Icons.call),
+        leading: Icon(Icons.person),
+        subtitle: Text("1122334455"),
+      )
 
     );
   }
