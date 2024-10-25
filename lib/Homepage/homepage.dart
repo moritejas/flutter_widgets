@@ -1,3 +1,13 @@
+import 'package:demo_flutter_flow/Componant/add_banner.dart';
+import 'package:demo_flutter_flow/Componant/audio_player.dart';
+import 'package:demo_flutter_flow/Componant/blur.dart';
+import 'package:demo_flutter_flow/Componant/google_map.dart';
+import 'package:demo_flutter_flow/Componant/lottie_animation.dart';
+import 'package:demo_flutter_flow/Componant/media_display.dart';
+import 'package:demo_flutter_flow/Componant/rive_animation.dart';
+import 'package:demo_flutter_flow/Componant/static_map.dart';
+import 'package:demo_flutter_flow/Componant/transform.dart';
+import 'package:demo_flutter_flow/Componant/web_view.dart';
 import 'package:demo_flutter_flow/Componant/youtube_videoplayer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -130,7 +140,28 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Video Player", page: const VideoPlayerComponent()),
               sizedbox(),
+              // Skip VideoPlayer
               allComponents(name: "Youtube Video Player", page: const YoutubeVideoPlayerComponent()),
+              sizedbox(),
+              allComponents(name: "Audio Player", page: AudioPlayerComponent()),
+              sizedbox(),
+              allComponents(name: "Web View", page: const WebViewComponent()),
+              sizedbox(),
+              allComponents(name: "StaticMap", page: const StaticMapComponent()),
+              sizedbox(),
+              allComponents(name: "GoogleMap", page: const GoogleMapComponent()),
+              sizedbox(),
+              allComponents(name: "Add Banner", page: const AddBannerComponent()),
+              sizedbox(),
+              allComponents(name: "Lottie Animation", page: const LottieAnimationComponent()),
+              sizedbox(),
+              allComponents(name: "Blur", page: const BlurComponent()),
+              sizedbox(),
+              allComponents(name: "Transform", page: const TransformComponent()),
+              sizedbox(),
+              allComponents(name: "Media Display", page: const MediaDisplayComponent()),
+              sizedbox(),
+              allComponents(name: "Rive Animation", page: const RiveAnimationComponent()),
               sizedbox(),
 
 

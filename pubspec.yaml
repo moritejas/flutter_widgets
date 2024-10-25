@@ -63,6 +63,10 @@ dependencies:
 
 #  Youtube Video Player
   youtube_player_flutter: ^9.1.1
+  youtube_player_iframe: ^5.2.0
+
+#  Audio Player
+  audioplayers: ^6.1.0
 
 
   # The following adds the Cupertino Icons font to your application.
