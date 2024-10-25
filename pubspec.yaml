@@ -58,6 +58,9 @@ dependencies:
 #  Table Calender
   table_calendar: ^3.1.2
 
+#  Video player
+  video_player: ^2.9.2
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

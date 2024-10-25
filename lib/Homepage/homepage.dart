@@ -1,3 +1,4 @@
+import 'package:demo_flutter_flow/Componant/youtube_videoplayer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../Componant/button.dart';
@@ -31,6 +32,7 @@ import '../Componant/tabbar.dart';
 import '../Componant/text.dart';
 import '../Componant/toggle_icon.dart';
 import '../Componant/vertical_divider.dart';
+import '../Componant/videoplayer.dart';
 import '../Componant/wrap.dart';
 
 class Homepage extends StatefulWidget {
@@ -102,7 +104,6 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Staggered View", page: StaggeredViewComponent()),
               sizedbox(),
-
               allComponents(name: "Flippable Card", page: const FlippableCardComponent()),
               sizedbox(),
               allComponents(name: "Swipeable Stack", page: const SwipeableStackComponent()),
@@ -123,11 +124,14 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Slidable ListTile", page: const SlidableListTileComponent()),
               sizedbox(),
-              // VideoPlayer
-              // Youtube Player
               allComponents(name: "Calender", page: const CalenderComponent()),
               sizedbox(),
               allComponents(name: "Toggle Icon", page: const ToggleIconComponent()),
+              sizedbox(),
+              allComponents(name: "Video Player", page: const VideoPlayerComponent()),
+              sizedbox(),
+              allComponents(name: "Youtube Video Player", page: const YoutubeVideoPlayerComponent()),
+              sizedbox(),
 
 
             ],
