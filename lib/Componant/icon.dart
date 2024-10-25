@@ -8,8 +8,16 @@ class IconComponent extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
       ),
-      body: const Text("This is Column Component"),
-
+      body:const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Icon(Icons.settings),
+          Icon(Icons.dashboard),
+          Icon(Icons.person),
+          Icon(Icons.add),
+        ],
+      )
     );
   }
 }

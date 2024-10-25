@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../Componant/button.dart';
+import '../Componant/calender.dart';
 import '../Componant/card.dart';
 import '../Componant/carousel.dart';
 import '../Componant/circle_image.dart';
@@ -13,18 +14,22 @@ import '../Componant/flex.dart';
 import '../Componant/flippable_card.dart';
 import '../Componant/form_validation.dart';
 import '../Componant/grid_view.dart';
+import '../Componant/icon.dart';
 import '../Componant/icon_button.dart';
 import '../Componant/image.dart';
 import '../Componant/list_view.dart';
+import '../Componant/listtile.dart';
 import '../Componant/page_view.dart';
 import '../Componant/rich_text.dart';
 import '../Componant/row.dart';
+import '../Componant/slidable_listtile.dart';
 import '../Componant/spacer.dart';
 import '../Componant/stack.dart';
 import '../Componant/staggerediew.dart';
 import '../Componant/swipeable_stack.dart';
 import '../Componant/tabbar.dart';
 import '../Componant/text.dart';
+import '../Componant/toggle_icon.dart';
 import '../Componant/vertical_divider.dart';
 import '../Componant/wrap.dart';
 
@@ -109,20 +114,20 @@ class _HomepageState extends State<Homepage> {
               allComponents(name: "Rich Text", page: const RichTextComponent()),
               sizedbox(),
               allComponents(name: "Circle Image", page: const CilrcleImageComponent()),
-              // sizedbox(),
-              // allComponents(name: "Icon", page: const IconComponent()),
-              // sizedbox(),
-              // allComponents(name: "Icon Button", page: const IconButtonComponent()),
-              // sizedbox(),
-              // allComponents(name: "ListTile", page: const ListTileComponent()),
-              // sizedbox(),
-              // allComponents(name: "Slidable ListTile", page: const SlidableListTileComponent()),
-              // sizedbox(),
-              // // VideoPlayer
-              // // Youtube Player
-              // allComponents(name: "Calender", page: const CalenderComponent()),
-              // sizedbox(),
-              // allComponents(name: "Toggle Icon", page: const ToggleIconComponent()),
+              sizedbox(),
+              allComponents(name: "Icon", page: const IconComponent()),
+              sizedbox(),
+              allComponents(name: "Icon Button", page: const IconButtonComponent()),
+              sizedbox(),
+              allComponents(name: "ListTile", page: const ListTileComponent()),
+              sizedbox(),
+              allComponents(name: "Slidable ListTile", page: const SlidableListTileComponent()),
+              sizedbox(),
+              // VideoPlayer
+              // Youtube Player
+              allComponents(name: "Calender", page: const CalenderComponent()),
+              sizedbox(),
+              allComponents(name: "Toggle Icon", page: const ToggleIconComponent()),
 
 
             ],
