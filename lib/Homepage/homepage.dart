@@ -1,21 +1,15 @@
-import 'package:demo_flutter_flow/Componant/calender.dart';
-import 'package:demo_flutter_flow/Componant/circle_image.dart';
-import 'package:demo_flutter_flow/Componant/flex.dart';
-import 'package:demo_flutter_flow/Componant/icon.dart';
-import 'package:demo_flutter_flow/Componant/listtile.dart';
-import 'package:demo_flutter_flow/Componant/rich_text.dart';
-import 'package:demo_flutter_flow/Componant/slidable_listtile.dart';
-import 'package:demo_flutter_flow/Componant/toggle_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../Componant/button.dart';
 import '../Componant/card.dart';
 import '../Componant/carousel.dart';
+import '../Componant/circle_image.dart';
 import '../Componant/column.dart';
 import '../Componant/container.dart';
 import '../Componant/data_table.dart';
 import '../Componant/divider.dart';
 import '../Componant/expandable.dart';
+import '../Componant/flex.dart';
 import '../Componant/flippable_card.dart';
 import '../Componant/form_validation.dart';
 import '../Componant/grid_view.dart';
@@ -23,6 +17,7 @@ import '../Componant/icon_button.dart';
 import '../Componant/image.dart';
 import '../Componant/list_view.dart';
 import '../Componant/page_view.dart';
+import '../Componant/rich_text.dart';
 import '../Componant/row.dart';
 import '../Componant/spacer.dart';
 import '../Componant/stack.dart';
@@ -62,46 +57,46 @@ class _HomepageState extends State<Homepage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // allComponents(name: "Text", page: const TextComponent()),
-              // sizedbox(),
-              // allComponents(name: "Column", page: const ColumnComponent()),
-              // sizedbox(),
-              // allComponents(name: "Row", page: const RowComponent()),
-              // sizedbox(),
-              // allComponents(name: "Container", page: const ContainerComponent()),
-              // sizedbox(),
-              // allComponents(name: "Button", page: const ButtonComponent()),
-              // sizedbox(),
-              // allComponents(name: "Image", page: const ImageComponent()),
-              // sizedbox(),
-              // allComponents(name: "Card", page: const CardComponent()),
-              // sizedbox(),
-              // allComponents(name: "ListView", page: const ListViewComponent()),
-              // sizedbox(),
-              // allComponents(name: "Stack", page: const StackComponent()),
-              // sizedbox(),
-              // allComponents(name: "GridView", page: const GridViewComponent()),
-              // sizedbox(),
-              // allComponents(name: "Spacer", page: const SpacerComponent()),
-              // sizedbox(),
-              // allComponents(name: "Divider", page: const DividerComponent()),
-              // sizedbox(),
-              // allComponents(name: "Vertical Divider",page: const VerticalDividerComponent()),
-              // sizedbox(),
-              // allComponents(name: "TabBar", page: const TabBarComponent()),
-              // sizedbox(),
-              // allComponents(name: "PageView", page: const PageViewComponent()),
-              // sizedbox(),
-              // allComponents(name: "Carousel", page: const CarouselComponent()),
-              // sizedbox(),
-              // allComponents(name: "Expandable", page: const ExpandableComponent()),
-              // sizedbox(),
-              // allComponents(name: "Wrap", page: const WrapComponent()),
-              // sizedbox(),
-              // allComponents(name: "Form Validation",page: const FormValidationComponent()),
-              // sizedbox(),
-              // allComponents(name: "Staggered View", page: StaggeredViewComponent()),
-              // sizedbox(),
+              allComponents(name: "Text", page: const TextComponent()),
+              sizedbox(),
+              allComponents(name: "Column", page: const ColumnComponent()),
+              sizedbox(),
+              allComponents(name: "Row", page: const RowComponent()),
+              sizedbox(),
+              allComponents(name: "Container", page: const ContainerComponent()),
+              sizedbox(),
+              allComponents(name: "Button", page: const ButtonComponent()),
+              sizedbox(),
+              allComponents(name: "Image", page: const ImageComponent()),
+              sizedbox(),
+              allComponents(name: "Card", page: const CardComponent()),
+              sizedbox(),
+              allComponents(name: "ListView", page: const ListViewComponent()),
+              sizedbox(),
+              allComponents(name: "Stack", page: const StackComponent()),
+              sizedbox(),
+              allComponents(name: "GridView", page: const GridViewComponent()),
+              sizedbox(),
+              allComponents(name: "Spacer", page: const SpacerComponent()),
+              sizedbox(),
+              allComponents(name: "Divider", page: const DividerComponent()),
+              sizedbox(),
+              allComponents(name: "Vertical Divider",page: const VerticalDividerComponent()),
+              sizedbox(),
+              allComponents(name: "TabBar", page: const TabBarComponent()),
+              sizedbox(),
+              allComponents(name: "PageView", page: const PageViewComponent()),
+              sizedbox(),
+              allComponents(name: "Carousel", page: const CarouselComponent()),
+              sizedbox(),
+              allComponents(name: "Expandable", page: const ExpandableComponent()),
+              sizedbox(),
+              allComponents(name: "Wrap", page: const WrapComponent()),
+              sizedbox(),
+              allComponents(name: "Form Validation",page: const FormValidationComponent()),
+              sizedbox(),
+              allComponents(name: "Staggered View", page: StaggeredViewComponent()),
+              sizedbox(),
 
               allComponents(name: "Flippable Card", page: const FlippableCardComponent()),
               sizedbox(),

@@ -19,7 +19,7 @@ class FlippableCardComponent extends StatelessWidget {
             width: 100,
             height: 100,
             decoration: const BoxDecoration(
-              color: Colors.deepPurple,
+              color: Colors.deepPurpleAccent,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(12),
                 bottomRight: Radius.circular(12),
