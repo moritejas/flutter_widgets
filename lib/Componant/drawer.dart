@@ -5,11 +5,10 @@ class DrawerComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+    return const Scaffold(
+      drawer: Drawer(
+        child: Text("This is Drawer"),
       ),
-      body: ElevatedButton(onPressed: (){},
-          child: const Text("This is Eleveted Button Component"))
     );
   }
 }
