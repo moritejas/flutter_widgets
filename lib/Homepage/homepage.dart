@@ -2,14 +2,28 @@ import 'package:demo_flutter_flow/Componant/add_banner.dart';
 import 'package:demo_flutter_flow/Componant/appbar.dart';
 import 'package:demo_flutter_flow/Componant/audio_player.dart';
 import 'package:demo_flutter_flow/Componant/blur.dart';
+import 'package:demo_flutter_flow/Componant/checkbox.dart';
+import 'package:demo_flutter_flow/Componant/checkbox_group.dart';
+import 'package:demo_flutter_flow/Componant/checkbox_listtile.dart';
+import 'package:demo_flutter_flow/Componant/choice_chip.dart';
+import 'package:demo_flutter_flow/Componant/counter_button.dart';
+import 'package:demo_flutter_flow/Componant/cradit_card_form.dart';
 import 'package:demo_flutter_flow/Componant/drawer.dart';
+import 'package:demo_flutter_flow/Componant/dropdown.dart';
 import 'package:demo_flutter_flow/Componant/end_drawer.dart';
 import 'package:demo_flutter_flow/Componant/fab_component.dart';
 import 'package:demo_flutter_flow/Componant/google_map.dart';
 import 'package:demo_flutter_flow/Componant/lottie_animation.dart';
 import 'package:demo_flutter_flow/Componant/media_display.dart';
+import 'package:demo_flutter_flow/Componant/pincode.dart';
+import 'package:demo_flutter_flow/Componant/plash_picker.dart';
+import 'package:demo_flutter_flow/Componant/radio_button.dart';
+import 'package:demo_flutter_flow/Componant/ratting_bar.dart';
 import 'package:demo_flutter_flow/Componant/rive_animation.dart';
+import 'package:demo_flutter_flow/Componant/signature.dart';
+import 'package:demo_flutter_flow/Componant/slider.dart';
 import 'package:demo_flutter_flow/Componant/static_map.dart';
+import 'package:demo_flutter_flow/Componant/text_field.dart';
 import 'package:demo_flutter_flow/Componant/transform.dart';
 import 'package:demo_flutter_flow/Componant/web_view.dart';
 import 'package:demo_flutter_flow/Componant/youtube_videoplayer.dart';
@@ -168,17 +182,7 @@ class _HomepageState extends State<Homepage> {
               allComponents(name: "Rive Animation", page: const RiveAnimationComponent()),
               sizedbox(),
 
-
-              allComponents(name: "AppBar", page: const AppBarComponent()),
-              sizedbox(),
-              allComponents(name: "FAB", page: const FABComponent()),
-              sizedbox(),
-              allComponents(name: "Drawer", page: const DrawerComponent()),
-              sizedbox(),
-              allComponents(name: "EndDrawer", page: const EndDrawerComponent()),
-
-
-
+/*
               allComponents(name: "Pdf Viewer", page: const BlurComponent()),
               sizedbox(),
               allComponents(name: "Progress Bar", page: const BlurComponent()),
@@ -209,6 +213,50 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Drag Target", page: const BlurComponent()),
               sizedbox(),
+*/
+
+              /// Page Element
+              allComponents(name: "AppBar", page: const AppBarComponent()),
+              sizedbox(),
+              allComponents(name: "FAB", page: const FABComponent()),
+              sizedbox(),
+              allComponents(name: "Drawer", page: const DrawerComponent()),
+              sizedbox(),
+              allComponents(name: "EndDrawer", page: const EndDrawerComponent()),
+
+
+              ///    Form Elements
+              allComponents(name: "TextField", page: const TextFieldComponent()),
+              sizedbox(),
+              allComponents(name: "Drop-Down", page: const DropDownComponent()),
+              sizedbox(),
+              allComponents(name: "Check Box", page: const CheckBoxComponent()),
+              sizedbox(),
+              allComponents(name: "Check Box List Tile", page: const CheckBoxListTileComponent()),
+              sizedbox(),
+              allComponents(name: "Radio Button", page: const RadioButtonComponent()),
+              sizedbox(),
+              allComponents(name: "Pin Code", page: const PinCodeComponent()),
+              sizedbox(),
+              allComponents(name: "Slider", page: const SliderComponent()),
+              sizedbox(),
+              allComponents(name: "Ratting Bar", page: const RattingBarComponent()),
+              sizedbox(),
+              allComponents(name: "Credit Card Form", page: const CreditCardFormComponent()),
+              sizedbox(),
+              allComponents(name: "Counter Button", page: const CounterButtonComponent()),
+              sizedbox(),
+              allComponents(name: "Choice Chips", page: const ChoiceChipComponent()),
+              sizedbox(),
+              allComponents(name: "Plash Picker", page: const PlashPickerComponent()),
+              sizedbox(),
+              // allComponents(name: "Form Validation", page: const FormValidationComponent()),
+              sizedbox(),
+              allComponents(name: "Check Box Group", page: const CheckBoxGroupComponent()),
+              sizedbox(),
+              allComponents(name: "Signature", page: const SignatureComponent()),
+
+
 
 
             ],
