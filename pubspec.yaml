@@ -62,8 +62,8 @@ dependencies:
   video_player: ^2.9.2
 
 #  Youtube Video Player
-  youtube_player_flutter: ^9.1.1
-  youtube_player_iframe: ^5.2.0
+#  youtube_player_flutter: ^9.1.1
+#  youtube_player_iframe: ^5.2.0
 
 #  Audio Player
   audioplayers: ^6.1.0
@@ -80,6 +80,14 @@ dependencies:
 #  Credit Card
   flutter_credit_card: ^4.0.1
 
+#  Web View
+#  webview_flutter: ^4.10.0
+
+#  Add Banner
+#  google_mobile_ads: ^5.2.0
+
+#  Lottie Animation
+  lottie: ^3.1.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

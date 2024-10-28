@@ -1,31 +1,46 @@
 import 'package:demo_flutter_flow/Componant/add_banner.dart';
 import 'package:demo_flutter_flow/Componant/appbar.dart';
 import 'package:demo_flutter_flow/Componant/audio_player.dart';
+import 'package:demo_flutter_flow/Componant/barcode.dart';
 import 'package:demo_flutter_flow/Componant/blur.dart';
+import 'package:demo_flutter_flow/Componant/chart.dart';
 import 'package:demo_flutter_flow/Componant/checkbox.dart';
 import 'package:demo_flutter_flow/Componant/checkbox_group.dart';
 import 'package:demo_flutter_flow/Componant/checkbox_listtile.dart';
 import 'package:demo_flutter_flow/Componant/choice_chip.dart';
+import 'package:demo_flutter_flow/Componant/conditional_build.dart';
 import 'package:demo_flutter_flow/Componant/counter_button.dart';
 import 'package:demo_flutter_flow/Componant/cradit_card_form.dart';
+import 'package:demo_flutter_flow/Componant/drag_target.dart';
+import 'package:demo_flutter_flow/Componant/draggable.dart';
 import 'package:demo_flutter_flow/Componant/drawer.dart';
 import 'package:demo_flutter_flow/Componant/dropdown.dart';
 import 'package:demo_flutter_flow/Componant/end_drawer.dart';
 import 'package:demo_flutter_flow/Componant/fab_component.dart';
+import 'package:demo_flutter_flow/Componant/gadge.dart';
 import 'package:demo_flutter_flow/Componant/google_map.dart';
+import 'package:demo_flutter_flow/Componant/language_selector.dart';
 import 'package:demo_flutter_flow/Componant/lottie_animation.dart';
+import 'package:demo_flutter_flow/Componant/markdown.dart';
 import 'package:demo_flutter_flow/Componant/media_display.dart';
+import 'package:demo_flutter_flow/Componant/mouse_region.dart';
+import 'package:demo_flutter_flow/Componant/mux_broadcast.dart';
+import 'package:demo_flutter_flow/Componant/pdf_viewer.dart';
 import 'package:demo_flutter_flow/Componant/pincode.dart';
 import 'package:demo_flutter_flow/Componant/plash_picker.dart';
+import 'package:demo_flutter_flow/Componant/progreass_bar.dart';
 import 'package:demo_flutter_flow/Componant/radio_button.dart';
 import 'package:demo_flutter_flow/Componant/ratting_bar.dart';
 import 'package:demo_flutter_flow/Componant/rive_animation.dart';
 import 'package:demo_flutter_flow/Componant/signature.dart';
 import 'package:demo_flutter_flow/Componant/slider.dart';
 import 'package:demo_flutter_flow/Componant/static_map.dart';
+import 'package:demo_flutter_flow/Componant/sticky_header.dart';
 import 'package:demo_flutter_flow/Componant/switch.dart';
 import 'package:demo_flutter_flow/Componant/switch_list_tile.dart';
 import 'package:demo_flutter_flow/Componant/text_field.dart';
+import 'package:demo_flutter_flow/Componant/timer.dart';
+import 'package:demo_flutter_flow/Componant/tooltip.dart';
 import 'package:demo_flutter_flow/Componant/transform.dart';
 import 'package:demo_flutter_flow/Componant/web_view.dart';
 import 'package:demo_flutter_flow/Componant/youtube_videoplayer.dart';
@@ -165,13 +180,16 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Audio Player", page: AudioPlayerComponent()),
               sizedbox(),
-              allComponents(name: "Web View", page: const WebViewComponent()),
+
+
+              // Skip The Web View
+              // allComponents(name: "Web View", page: const WebViewComponent()),
               sizedbox(),
-              allComponents(name: "StaticMap", page: const StaticMapComponent()),
+              allComponents(name: "StaticMap", page: const StaticMapComponent()),// Skip
               sizedbox(),
-              allComponents(name: "GoogleMap", page: const GoogleMapComponent()),
+              allComponents(name: "GoogleMap", page: const GoogleMapComponent()),// Skip
               sizedbox(),
-              allComponents(name: "Add Banner", page: const AddBannerComponent()),
+              allComponents(name: "Add Banner", page: const AddBannerComponent()),// Skip
               sizedbox(),
               allComponents(name: "Lottie Animation", page: const LottieAnimationComponent()),
               sizedbox(),
@@ -183,39 +201,37 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Rive Animation", page: const RiveAnimationComponent()),
               sizedbox(),
+              allComponents(name: "Pdf Viewer", page: const PdfViewerComponent()),
+              sizedbox(),
+              allComponents(name: "Progress Bar", page: const ProgressBarComponent()),
+              sizedbox(),
+              allComponents(name: "Language Selector", page: const LanguageSelectorComponent()),
+              sizedbox(),
+              allComponents(name: "Badge", page: const BadgeComponent()),
+              sizedbox(),
+              allComponents(name: "Chart", page: const ChartComponent()),
+              sizedbox(),
+              allComponents(name: "Mux Broadcast", page: const MuxBroadcastComponent()),
+              sizedbox(),
+              allComponents(name: "Timer", page: const TimerComponent()),
+              sizedbox(),
+              allComponents(name: "Mouse Region", page: const MouseRegionComponent()),
+              sizedbox(),
+              allComponents(name: "Barcode", page: const BarcodeComponent()),
+              sizedbox(),
+              allComponents(name: "Tool Tip", page: const ToolTipComponent()),
+              sizedbox(),
+              allComponents(name: "Conditional Build", page: const ConditionalBuildComponent()),
+              sizedbox(),
+              allComponents(name: "Sticky Header", page: const SticktHeaderComponent()),
+              sizedbox(),
+              allComponents(name: "Markdown", page: const MardownComponent()),
+              sizedbox(),
+              allComponents(name: "Draggable", page: const DraggableComponent()),
+              sizedbox(),
+              allComponents(name: "Drag Target", page: const DragTargetComponent()),
+              sizedbox(),
 
-/*
-              allComponents(name: "Pdf Viewer", page: const BlurComponent()),
-              sizedbox(),
-              allComponents(name: "Progress Bar", page: const BlurComponent()),
-              sizedbox(),
-              allComponents(name: "Language Selector", page: const BlurComponent()),
-              sizedbox(),
-              allComponents(name: "Badge", page: const BlurComponent()),
-              sizedbox(),
-              allComponents(name: "Chart", page: const BlurComponent()),
-              sizedbox(),
-              allComponents(name: "Mux Broadcast", page: const BlurComponent()),
-              sizedbox(),
-              allComponents(name: "Timer", page: const BlurComponent()),
-              sizedbox(),
-              allComponents(name: "Mouse Region", page: const BlurComponent()),
-              sizedbox(),
-              allComponents(name: "Barcode", page: const BlurComponent()),
-              sizedbox(),
-              allComponents(name: "Tool Tip", page: const BlurComponent()),
-              sizedbox(),
-              allComponents(name: "Conditional Build", page: const BlurComponent()),
-              sizedbox(),
-              allComponents(name: "Sticky Header", page: const BlurComponent()),
-              sizedbox(),
-              allComponents(name: "Markdown", page: const BlurComponent()),
-              sizedbox(),
-              allComponents(name: "Draggable", page: const BlurComponent()),
-              sizedbox(),
-              allComponents(name: "Drag Target", page: const BlurComponent()),
-              sizedbox(),
-*/
 
               /// Page Element
               allComponents(name: "AppBar", page: const AppBarComponent()),
@@ -254,8 +270,9 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Choice Chips", page: const ChoiceChipComponent()),
               sizedbox(),
+
               /// Skip the Place Picker
-              allComponents(name: "Plash Picker", page: const PlashPickerComponent()),
+              // allComponents(name: "Plash Picker", page: const PlashPickerComponent()),
               sizedbox(),
               allComponents(name: "Check Box Group", page: const CheckBoxGroupComponent()),
               sizedbox(),
