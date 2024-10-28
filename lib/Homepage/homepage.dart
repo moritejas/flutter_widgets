@@ -23,6 +23,8 @@ import 'package:demo_flutter_flow/Componant/rive_animation.dart';
 import 'package:demo_flutter_flow/Componant/signature.dart';
 import 'package:demo_flutter_flow/Componant/slider.dart';
 import 'package:demo_flutter_flow/Componant/static_map.dart';
+import 'package:demo_flutter_flow/Componant/switch.dart';
+import 'package:demo_flutter_flow/Componant/switch_list_tile.dart';
 import 'package:demo_flutter_flow/Componant/text_field.dart';
 import 'package:demo_flutter_flow/Componant/transform.dart';
 import 'package:demo_flutter_flow/Componant/web_view.dart';
@@ -233,6 +235,10 @@ class _HomepageState extends State<Homepage> {
               allComponents(name: "Check Box", page: const CheckBoxComponent()),
               sizedbox(),
               allComponents(name: "Check Box List Tile", page: const CheckBoxListTileComponent()),
+              sizedbox(),
+              allComponents(name: "Switch", page: const SwitchComponent()),
+              sizedbox(),
+              allComponents(name: "Switch List Tile", page: const SwitchListTileComponent()),
               sizedbox(),
               allComponents(name: "Radio Button", page: const RadioButtonComponent()),
               sizedbox(),
