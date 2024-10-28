@@ -257,6 +257,7 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Choice Chips", page: const ChoiceChipComponent()),
               sizedbox(),
+              /// Skip the Place Picker
               allComponents(name: "Plash Picker", page: const PlashPickerComponent()),
               sizedbox(),
               // allComponents(name: "Form Validation", page: const FormValidationComponent()),
