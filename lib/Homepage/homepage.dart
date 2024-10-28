@@ -248,19 +248,14 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Ratting Bar", page: const RattingBarComponent()),
               sizedbox(),
-
-              // Temporary Skip
               allComponents(name: "Credit Card Form", page: const CreditCardFormComponent()),
               sizedbox(),
-
               allComponents(name: "Counter Button", page: const CounterButtonComponent()),
               sizedbox(),
               allComponents(name: "Choice Chips", page: const ChoiceChipComponent()),
               sizedbox(),
               /// Skip the Place Picker
               allComponents(name: "Plash Picker", page: const PlashPickerComponent()),
-              sizedbox(),
-              // allComponents(name: "Form Validation", page: const FormValidationComponent()),
               sizedbox(),
               allComponents(name: "Check Box Group", page: const CheckBoxGroupComponent()),
               sizedbox(),

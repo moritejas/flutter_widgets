@@ -77,6 +77,9 @@ dependencies:
 #  Signature
   signature: ^5.5.0
 
+#  Credit Card
+  flutter_credit_card: ^4.0.1
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
