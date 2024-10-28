@@ -5,11 +5,10 @@ class EndDrawerComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+    return const Scaffold(
+      endDrawer: Drawer(
+        elevation: 16,
       ),
-      body: ElevatedButton(onPressed: (){},
-          child: const Text("This is Eleveted Button Component"))
     );
   }
 }
