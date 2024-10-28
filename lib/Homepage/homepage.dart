@@ -1,6 +1,10 @@
 import 'package:demo_flutter_flow/Componant/add_banner.dart';
+import 'package:demo_flutter_flow/Componant/appbar.dart';
 import 'package:demo_flutter_flow/Componant/audio_player.dart';
 import 'package:demo_flutter_flow/Componant/blur.dart';
+import 'package:demo_flutter_flow/Componant/drawer.dart';
+import 'package:demo_flutter_flow/Componant/end_drawer.dart';
+import 'package:demo_flutter_flow/Componant/fab_component.dart';
 import 'package:demo_flutter_flow/Componant/google_map.dart';
 import 'package:demo_flutter_flow/Componant/lottie_animation.dart';
 import 'package:demo_flutter_flow/Componant/media_display.dart';
@@ -162,6 +166,48 @@ class _HomepageState extends State<Homepage> {
               allComponents(name: "Media Display", page: const MediaDisplayComponent()),
               sizedbox(),
               allComponents(name: "Rive Animation", page: const RiveAnimationComponent()),
+              sizedbox(),
+
+
+              allComponents(name: "AppBar", page: const AppBarComponent()),
+              sizedbox(),
+              allComponents(name: "FAB", page: const FABComponent()),
+              sizedbox(),
+              allComponents(name: "Drawer", page: const DrawerComponent()),
+              sizedbox(),
+              allComponents(name: "EndDrawer", page: const EndDrawerComponent()),
+
+
+
+              allComponents(name: "Pdf Viewer", page: const BlurComponent()),
+              sizedbox(),
+              allComponents(name: "Progress Bar", page: const BlurComponent()),
+              sizedbox(),
+              allComponents(name: "Language Selector", page: const BlurComponent()),
+              sizedbox(),
+              allComponents(name: "Badge", page: const BlurComponent()),
+              sizedbox(),
+              allComponents(name: "Chart", page: const BlurComponent()),
+              sizedbox(),
+              allComponents(name: "Mux Broadcast", page: const BlurComponent()),
+              sizedbox(),
+              allComponents(name: "Timer", page: const BlurComponent()),
+              sizedbox(),
+              allComponents(name: "Mouse Region", page: const BlurComponent()),
+              sizedbox(),
+              allComponents(name: "Barcode", page: const BlurComponent()),
+              sizedbox(),
+              allComponents(name: "Tool Tip", page: const BlurComponent()),
+              sizedbox(),
+              allComponents(name: "Conditional Build", page: const BlurComponent()),
+              sizedbox(),
+              allComponents(name: "Sticky Header", page: const BlurComponent()),
+              sizedbox(),
+              allComponents(name: "Markdown", page: const BlurComponent()),
+              sizedbox(),
+              allComponents(name: "Draggable", page: const BlurComponent()),
+              sizedbox(),
+              allComponents(name: "Drag Target", page: const BlurComponent()),
               sizedbox(),
 
 
