@@ -78,10 +78,10 @@ dependencies:
   signature: ^5.5.0
 
 #  Credit Card
-  flutter_credit_card: ^4.0.1
+#  flutter_credit_card: ^4.0.1
 
 #  Web View
-#  webview_flutter: ^4.10.0
+  webview_flutter: ^4.10.0
 
 #  Add Banner
 #  google_mobile_ads: ^5.2.0
@@ -106,6 +106,9 @@ dependencies:
 
 #  MarkDown
   flutter_markdown: ^0.7.4+1
+
+#  Sticky Headers
+  sticky_headers: ^0.3.0+2
 
 
 

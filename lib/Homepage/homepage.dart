@@ -180,10 +180,7 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Audio Player", page: AudioPlayerComponent()),
               sizedbox(),
-
-
-              // Skip The Web View
-              // allComponents(name: "Web View", page: const WebViewComponent()),
+              allComponents(name: "Web View", page: const WebViewComponent()),
               sizedbox(),
               allComponents(name: "StaticMap", page: const StaticMapComponent()),// Skip
               sizedbox(),
@@ -272,7 +269,7 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
 
               /// Skip the Place Picker
-              // allComponents(name: "Plash Picker", page: const PlashPickerComponent()),
+              allComponents(name: "Plash Picker", page: const PlashPickerComponent()),// Skip
               sizedbox(),
               allComponents(name: "Check Box Group", page: const CheckBoxGroupComponent()),
               sizedbox(),

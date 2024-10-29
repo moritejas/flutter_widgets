@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_credit_card/flutter_credit_card.dart';
+// import 'package:flutter_credit_card/flutter_credit_card.dart';
 
 class CreditCardFormComponent extends StatefulWidget {
   const CreditCardFormComponent({super.key});
@@ -29,14 +29,14 @@ class _CreditCardFormComponentState extends State<CreditCardFormComponent> {
 
             /// Add Credit Card Dependencies ( flutter_credit_card: ^4.0.1)
 
-            CreditCardWidget(
-              cardNumber: cardNumber,
-              expiryDate: expirationDate,
-              cardHolderName: cardHolderName,
-              cvvCode: cvvCode,
-              showBackView: false, // true when you want to show cvv
-              onCreditCardWidgetChange: (creditCardWidgetChange) {},
-            ),
+            // CreditCardWidget(
+            //   cardNumber: cardNumber,
+            //   expiryDate: expirationDate,
+            //   cardHolderName: cardHolderName,
+            //   cvvCode: cvvCode,
+            //   showBackView: false, // true when you want to show cvv
+            //   onCreditCardWidgetChange: (creditCardWidgetChange) {},
+            // ),
             const SizedBox(height: 20),
             Form(
               key: _formKey,
