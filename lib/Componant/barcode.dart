@@ -10,7 +10,7 @@ class BarcodeComponent extends StatelessWidget {
       appBar: AppBar(),
       body: BarcodeWidget(
         barcode: Barcode.code128(),
-        data: 'Hello Flutter',
+        data: 'Hello Flutters',
         width: 200,
         height: 200,
       ),
