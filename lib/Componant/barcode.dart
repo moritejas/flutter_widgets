@@ -1,3 +1,4 @@
+import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/material.dart';
 
 class BarcodeComponent extends StatelessWidget {
@@ -6,10 +7,13 @@ class BarcodeComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(),
+      body: BarcodeWidget(
+        barcode: Barcode.code128(),
+        data: 'Hello Flutter',
+        width: 200,
+        height: 200,
       ),
-      body: ElevatedButton(onPressed: (){},
-          child: const Text("This is Elevated Button Component"))
     );
   }
 }
