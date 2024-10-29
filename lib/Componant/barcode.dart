@@ -8,6 +8,9 @@ class BarcodeComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+
+      /// Add this Dependencies (barcode_widget: ^2.0.4)
+
       body: BarcodeWidget(
         barcode: Barcode.code128(),
         data: 'Hello Flutters',
