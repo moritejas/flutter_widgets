@@ -8,8 +8,18 @@ class ToolTipComponent extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
       ),
-      body: ElevatedButton(onPressed: (){},
-          child: const Text("This is Eleveted Button Component"))
+      body: Center(
+        child: Tooltip(
+          message: "This is an add button",
+          child: IconButton(
+            icon: const Icon(Icons.add),
+            onPressed: () {
+              // Action when button is pressed
+            },
+            iconSize: 48,
+          ),
+        ),
+      ),
     );
   }
 }
