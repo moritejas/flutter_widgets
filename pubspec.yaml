@@ -64,6 +64,7 @@ dependencies:
 #  Youtube Video Player
 #  youtube_player_flutter: ^9.1.1
 #  youtube_player_iframe: ^5.2.0
+  youtube_player_flutter: ^9.1.1
 
 #  Audio Player
   audioplayers: ^6.1.0

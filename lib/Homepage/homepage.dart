@@ -175,18 +175,17 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Video Player", page: const VideoPlayerComponent()),
               sizedbox(),
-              // Skip VideoPlayer
               allComponents(name: "Youtube Video Player", page: const YoutubeVideoPlayerComponent()),
               sizedbox(),
               allComponents(name: "Audio Player", page: AudioPlayerComponent()),
               sizedbox(),
               allComponents(name: "Web View", page: const WebViewComponent()),
               sizedbox(),
-              allComponents(name: "StaticMap", page: const StaticMapComponent()),// Skip
+              allComponents(name: "StaticMap", page: const StaticMapComponent()),// Skip ----------------
               sizedbox(),
-              allComponents(name: "GoogleMap", page: const GoogleMapComponent()),// Skip
+              allComponents(name: "GoogleMap", page: const GoogleMapComponent()),// Skip ----------------
               sizedbox(),
-              allComponents(name: "Add Banner", page: const AddBannerComponent()),// Skip
+              allComponents(name: "Add Banner", page: const AddBannerComponent()),// Skip ----------------
               sizedbox(),
               allComponents(name: "Lottie Animation", page: const LottieAnimationComponent()),
               sizedbox(),
@@ -208,7 +207,7 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Chart", page: const ChartComponent()),
               sizedbox(),
-              allComponents(name: "Mux Broadcast", page: const MuxBroadcastComponent()), // Skip
+              allComponents(name: "Mux Broadcast", page: const MuxBroadcastComponent()), // Skip ----------------
               sizedbox(),
               allComponents(name: "Timer", page: const TimerComponent()),
               sizedbox(),
@@ -269,7 +268,7 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
 
               /// Skip the Place Picker
-              allComponents(name: "Plash Picker", page: const PlashPickerComponent()),// Skip
+              allComponents(name: "Plash Picker", page: const PlashPickerComponent()),// Skip ----------------
               sizedbox(),
               allComponents(name: "Check Box Group", page: const CheckBoxGroupComponent()),
               sizedbox(),
