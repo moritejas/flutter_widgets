@@ -17,7 +17,7 @@ import 'package:demo_flutter_flow/Componant/drawer.dart';
 import 'package:demo_flutter_flow/Componant/dropdown.dart';
 import 'package:demo_flutter_flow/Componant/end_drawer.dart';
 import 'package:demo_flutter_flow/Componant/fab_component.dart';
-import 'package:demo_flutter_flow/Componant/gadge.dart';
+import 'package:demo_flutter_flow/Componant/badge.dart';
 import 'package:demo_flutter_flow/Componant/google_map.dart';
 import 'package:demo_flutter_flow/Componant/language_selector.dart';
 import 'package:demo_flutter_flow/Componant/lottie_animation.dart';
@@ -205,7 +205,7 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Progress Bar", page: const ProgressBarComponent()),
               sizedbox(),
-              allComponents(name: "Language Selector", page: const LanguageSelectorComponent()),
+              allComponents(name: "Language Selector", page: const LanguageSelectorComponent()), // Skip
               sizedbox(),
               allComponents(name: "Badge", page: const BadgeComponent()),
               sizedbox(),
