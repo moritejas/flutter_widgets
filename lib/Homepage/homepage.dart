@@ -205,7 +205,7 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Progress Bar", page: const ProgressBarComponent()),
               sizedbox(),
-              allComponents(name: "Language Selector", page: const LanguageSelectorComponent()), // Skip
+              allComponents(name: "Language Selector", page: const LanguageSelectorComponent()),
               sizedbox(),
               allComponents(name: "Badge", page: const BadgeComponent()),
               sizedbox(),
