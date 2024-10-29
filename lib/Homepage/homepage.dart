@@ -211,7 +211,7 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Chart", page: const ChartComponent()),
               sizedbox(),
-              allComponents(name: "Mux Broadcast", page: const MuxBroadcastComponent()),
+              allComponents(name: "Mux Broadcast", page: const MuxBroadcastComponent()), // Skip
               sizedbox(),
               allComponents(name: "Timer", page: const TimerComponent()),
               sizedbox(),
