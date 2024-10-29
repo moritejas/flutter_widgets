@@ -8,8 +8,29 @@ class DraggableComponent extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
       ),
-      body: ElevatedButton(onPressed: (){},
-          child: const Text("This is Eleveted Button Component"))
+      body: const SafeArea(
+        top: true,
+        child: Draggable<String>(
+          data: '',
+          feedback: Material(
+            type: MaterialType.transparency,
+            child: Text(
+              'Hello World',
+              style: TextStyle(
+                fontFamily: 'Inter',
+                letterSpacing: 0.0,
+              ),
+            ),
+          ),
+          child: Text(
+            'Hello World',
+            style: TextStyle(
+              fontFamily: 'Inter',
+              letterSpacing: 0.0,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
