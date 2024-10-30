@@ -19,10 +19,10 @@ class _PlashPickerComponentState extends State<PlashPickerComponent> {
           children: [
             Text(
               _placeName,
-              style: TextStyle(fontSize: 24.0),
+              style: const TextStyle(fontSize: 24.0),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () async {
                 // final result = await showPlacePicker();
@@ -32,7 +32,7 @@ class _PlashPickerComponentState extends State<PlashPickerComponent> {
                 //   });
                 // }
               },
-              child: Text('Pick a Place'),
+              child: const Text('Pick a Place'),
             ),
           ],
         ),

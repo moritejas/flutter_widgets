@@ -33,7 +33,7 @@ class _VideoPlayerComponentState extends State<VideoPlayerComponent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Video Player")),
+      appBar: AppBar(title: const Text("Video Player")),
       body: Center(
         child: _controller.value.isInitialized
             ? Column(
@@ -65,7 +65,7 @@ class _VideoPlayerComponentState extends State<VideoPlayerComponent> {
             ),
           ],
         )
-            : CircularProgressIndicator(),
+            : const CircularProgressIndicator(),
       ),
     );
   }

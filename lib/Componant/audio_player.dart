@@ -39,7 +39,7 @@ class _AudioPlayerComponentState extends State<AudioPlayerComponent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Audio Player Example")),
+      appBar: AppBar(title: const Text("Audio Player Example")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -49,9 +49,9 @@ class _AudioPlayerComponentState extends State<AudioPlayerComponent> {
               iconSize: 64,
               onPressed: _playPauseAudio,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             IconButton(
-              icon: Icon(Icons.stop),
+              icon: const Icon(Icons.stop),
               iconSize: 64,
               onPressed: _stopAudio,
             ),

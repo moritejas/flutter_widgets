@@ -64,7 +64,7 @@ class _DraggableComponentState extends State<DraggableComponent> {
                 color: Colors.blue,
               ),
             ),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             DragTarget<Color>(
               onAccept: (color) {
                 setState(() {
@@ -75,7 +75,7 @@ class _DraggableComponentState extends State<DraggableComponent> {
                 width: 200,
                 height: 200,
                 color: caughtColor,
-                child: Center(
+                child: const Center(
                   child: Text(
                     "Drop Here",
                     style: TextStyle(color: Colors.white, fontSize: 20),
