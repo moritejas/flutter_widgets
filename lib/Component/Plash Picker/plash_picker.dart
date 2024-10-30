@@ -8,7 +8,7 @@ class PlashPickerComponent extends StatefulWidget {
 }
 
 class _PlashPickerComponentState extends State<PlashPickerComponent> {
-  String _placeName = "Pick a place";
+  final String _placeName = "Pick a place";
 
   @override
   Widget build(BuildContext context) {

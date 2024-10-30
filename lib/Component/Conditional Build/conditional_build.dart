@@ -8,8 +8,7 @@ class ConditionalBuildComponent extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
       ),
-      body: ElevatedButton(onPressed: (){},
-          child: const Text("This is Eleveted Button Component"))
+      body:  const Text("This is Conditional Build")
     );
   }
 }

@@ -31,7 +31,7 @@ class _RiveAnimationComponentState extends State<RiveAnimationComponent> {
           /// Add this Dependencies (rive: ^0.13.15)
           child: RiveAnimation.network(
             'https://public.rive.app/community/runtime-files/1199-2317-jack-olantern.riv',
-            artboard: 'New Artboard',
+            artboard: 'New Art board',
             fit: BoxFit.cover,
             controllers: [_controller],
           ),
