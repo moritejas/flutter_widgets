@@ -19,6 +19,7 @@ import 'package:demo_flutter_flow/Component/End%20Drawer/end_drawer.dart';
 import 'package:demo_flutter_flow/Component/Fab/fab_component.dart';
 import 'package:demo_flutter_flow/Component/Badge/badge.dart';
 import 'package:demo_flutter_flow/Component/Google%20Map/google_map.dart';
+import 'package:demo_flutter_flow/Component/Index%20Stack/index_stack.dart';
 import 'package:demo_flutter_flow/Component/Language%20Selector/language_selector.dart';
 import 'package:demo_flutter_flow/Component/Lottie%20Animation/lottie_animation.dart';
 import 'package:demo_flutter_flow/Component/Markdown/markdown.dart';
@@ -272,7 +273,9 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Check Box Group", page: const CheckBoxGroupComponent()),
               sizedbox(),
-              allComponents(name: "Signature", page: const SignatureComponent()),
+              allComponents(name: "Signature", page: const SignatureComponent())
+              ,sizedbox(),
+              allComponents(name: "Signature", page: const IndexedTagComponent()),
 
 
 
