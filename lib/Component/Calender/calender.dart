@@ -41,33 +41,34 @@ class _CalenderComponentState extends State<CalenderComponent> {
       appBar: AppBar(
         title: const Text('Calendar Example'),
       ),
-      body: Column(
-        children: [
-
-          // Add This DependencyTable Calender (table_calendar: ^3.1.2)
-
-          TableCalendar(
-            firstDay: DateTime.utc(2020, 1, 1),
-            lastDay: DateTime.utc(2030, 12, 31),
-            focusedDay: _focusedDay,
-            selectedDayPredicate: (day) => isSameDay(_selectedDay, day),
-            onDaySelected: _onDaySelected,
-            eventLoader: (day) => _events[day] ?? [],
-          ),
-          const SizedBox(height: 8.0),
-          Expanded(
-            child: ListView.builder(
-              itemCount: _selectedEvents.length,
-              itemBuilder: (context, index) {
-                return Card(
-                  child: ListTile(
-                    title: Text(_selectedEvents[index]),
-                  ),
-                );
-              },
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            // Add This DependencyTable Calender (table_calendar: ^3.1.2)
+            TableCalendar(
+              firstDay: DateTime.utc(2020, 1, 1),
+              lastDay: DateTime.utc(2030, 12, 31),
+              focusedDay: _focusedDay,
+              selectedDayPredicate: (day) => isSameDay(_selectedDay, day),
+              onDaySelected: _onDaySelected,
+              eventLoader: (day) => _events[day] ?? [],
             ),
-          ),
-        ],
+            const SizedBox(height: 8.0),
+            Expanded(
+              child: ListView.builder(
+                itemCount: _selectedEvents.length,
+                itemBuilder: (context, index) {
+                  return Card(
+                    child: ListTile(
+                      title: Text(_selectedEvents[index]),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
