@@ -21,7 +21,9 @@ class CircleImageComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title:Text("This is Circle Image"),
+      ),
       body: SafeArea(
         top: true,
         child: Center(
