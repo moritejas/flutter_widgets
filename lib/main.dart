@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 // import 'Homepage/homepage.dart';
-import 'Component/Circle Image/circle_image.dart';
+import 'Component/Counter Button/counter_button.dart';
 
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: CircleImageComponent(),
+      home: CounterButtonComponent(),
     );
   }
 }
