@@ -6,43 +6,68 @@ class IconComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+      ),
       body: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Icon(Icons.settings),
-
-          // Divider with all properties
-          VerticalDivider(
-            color: Colors.black,              // Color of the divider line
-            thickness: 2,                     // Thickness of the divider line
-            width: 20,                        // Space occupied by the divider itself
-            indent: 10,                       // Starting indentation from top
-            endIndent: 10,                    // Ending indentation from bottom
+          Icon(
+            Icons.settings,
+            size: 40.0, // Size of the icon
+            color: Colors.blue, // Color of the icon
+            semanticLabel: 'Settings Icon', // Screen reader description
+            textDirection: TextDirection.ltr, // Icon orientation
+            shadows: [
+              Shadow(
+                color: Colors.black,
+                offset: Offset(2, 2),
+                blurRadius: 4,
+              ),
+            ], // Adds a shadow effect
           ),
-
-          Icon(Icons.dashboard),
-
-          VerticalDivider(
-            color: Colors.red,                // Example of a different color
-            thickness: 2,
-            width: 20,
-            indent: 10,
-            endIndent: 10,
+          Icon(
+            Icons.dashboard,
+            size: 40.0,
+            color: Colors.green,
+            semanticLabel: 'Dashboard Icon',
+            textDirection: TextDirection.ltr,
+            shadows: [
+              Shadow(
+                color: Colors.grey,
+                offset: Offset(2, 2),
+                blurRadius: 4,
+              ),
+            ],
           ),
-
-          Icon(Icons.person),
-
-          VerticalDivider(
-            color: Colors.blue,               // Example with another color
-            thickness: 2,
-            width: 20,
-            indent: 10,
-            endIndent: 10,
+          Icon(
+            Icons.person,
+            size: 40.0,
+            color: Colors.red,
+            semanticLabel: 'Person Icon',
+            textDirection: TextDirection.rtl,
+            shadows: [
+              Shadow(
+                color: Colors.black,
+                offset: Offset(1, 1),
+                blurRadius: 3,
+              ),
+            ],
           ),
-
-          Icon(Icons.add),
+          Icon(
+            Icons.add,
+            size: 40.0,
+            color: Colors.purple,
+            semanticLabel: 'Add Icon',
+            textDirection: TextDirection.ltr,
+            shadows: [
+              Shadow(
+                color: Colors.black,
+                offset: Offset(2, 2),
+                blurRadius: 4,
+              ),
+            ],
+          ),
         ],
       ),
     );
