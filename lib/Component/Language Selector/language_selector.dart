@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 
 class LanguageSelectorComponent extends StatefulWidget {
-  const LanguageSelectorComponent({super.key});
+  final String title; // Property for custom title
+  final List<String> languages; // Property for custom language list
+  final String initialLanguage; // Property for initial language selection
+  final TextStyle textStyle; // Property for customizing text style
+
+  const LanguageSelectorComponent({
+    super.key,
+    this.title = 'Select Language', // Default value for the title
+    this.languages = const ['English', 'Spanish', 'French', 'German'], // Default language list
+    this.initialLanguage = 'English', // Default language
+    this.textStyle = const TextStyle(fontSize: 20), // Default text style
+  });
 
   @override
   State<LanguageSelectorComponent> createState() =>
@@ -9,20 +20,30 @@ class LanguageSelectorComponent extends StatefulWidget {
 }
 
 class _LanguageSelectorComponentState extends State<LanguageSelectorComponent> {
-  String _selectedLanguage = 'English';
-  // Default language
-  final List<String> _languages = ['English', 'Spanish', 'French', 'German'];
+  late String _selectedLanguage;
+  late List<String> _languages;
+
+  @override
+  void initState() {
+    super.initState();
+    // Initialize selected language and languages list from the widget's properties
+    _selectedLanguage = widget.initialLanguage;
+    _languages = widget.languages;
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title), // Using title property
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'Selected Language: $_selectedLanguage',
-              style: const TextStyle(fontSize: 20),
+              style: widget.textStyle, // Using textStyle property
             ),
             const SizedBox(height: 20),
             DropdownButton<String>(
@@ -33,8 +54,8 @@ class _LanguageSelectorComponentState extends State<LanguageSelectorComponent> {
                   _selectedLanguage = newValue!;
                 });
               },
-              items:
-                  _languages.map<DropdownMenuItem<String>>((String language) {
+              items: _languages
+                  .map<DropdownMenuItem<String>>((String language) {
                 return DropdownMenuItem<String>(
                   value: language,
                   child: Text(language),

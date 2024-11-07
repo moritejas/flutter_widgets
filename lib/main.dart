@@ -7,6 +7,7 @@ import 'Component/Form Validation/form_validation.dart';
 import 'Component/Grid View/grid_view.dart';
 import 'Component/Image/image.dart';
 import 'Component/Index Stack/index_stack.dart';
+import 'Component/Language Selector/language_selector.dart';
 
 
 void main() {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: IndexedTagComponent(),
+      home: LanguageSelectorComponent(),
     );
   }
 }
