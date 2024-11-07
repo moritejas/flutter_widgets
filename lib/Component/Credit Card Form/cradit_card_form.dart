@@ -28,6 +28,8 @@ class _CreditCardFormComponentState extends State<CreditCardFormComponent> {
         child: SingleChildScrollView(  // Make the Column scrollable
           child: Column(
             children: [
+
+              /// Add This dependency : flutter_credit_card: ^4.0.1
               CreditCardWidget(
                 cardNumber: cardNumber,
                 expiryDate: expirationDate,
