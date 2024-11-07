@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 // import 'Homepage/homepage.dart';
-import 'Component/Expandable/expandable.dart';
+import 'Component/Flex/flex.dart';
 
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: ExpandableComponent(),
+      home: FlexComponent(),
     );
   }
 }
