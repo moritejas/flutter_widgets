@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'Component/Markdown/markdown.dart';
 import 'Component/Media Display/media_display.dart';
 import 'Component/Mouse Region/mouse_region.dart';
+import 'Component/PDF Viewer/pdf_viewer.dart';
 import 'Component/Page View/page_view.dart';
 
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: PageViewComponent(),
+      home: PdfViewerComponent(),
     );
   }
 }

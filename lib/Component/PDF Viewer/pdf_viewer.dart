@@ -17,6 +17,8 @@ class _PdfViewerComponentState extends State<PdfViewerComponent> {
     // Initialize the PDF controller with an asset file
     _pdfController = PdfController(
       document: PdfDocument.openAsset('assets/sample.pdf'), // PDF from assets
+      initialPage: 0, // The page to start from
+      viewportFraction: 1.0, // Fraction of the screen the page should take
     );
   }
 
@@ -53,7 +55,21 @@ class _PdfViewerComponentState extends State<PdfViewerComponent> {
         ],
       ),
       body: PdfView(
+        pageSnapping: true,
+        reverse: true,
         controller: _pdfController,
+        scrollDirection: Axis.vertical, // Page scroll direction (vertical or horizontal)
+        // background: Colors.white, // Background color of the PDF view
+        onPageChanged: (int page) {
+          print('Current page: $page'); // Trigger when page changes
+        },
+        onDocumentLoaded: (PdfDocument document) {
+          print('Document loaded with ${document.pagesCount} pages');
+        },
+        onDocumentError: (error) {
+          print('Error loading document: $error');
+        },
+        physics: const BouncingScrollPhysics(), // Physics for page scrolling
       ),
     );
   }
