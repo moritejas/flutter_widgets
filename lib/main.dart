@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 // import 'Homepage/homepage.dart';
 import 'Component/Flex/flex.dart';
 import 'Component/Flippable Card/flippable_card.dart';
+import 'Component/Form Validation/form_validation.dart';
 
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: FlippableCardComponent(),
+      home: FormValidationComponent(),
     );
   }
 }
