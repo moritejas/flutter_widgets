@@ -79,7 +79,8 @@ dependencies:
   signature: ^5.5.0
 
 #  Credit Card
-#  flutter_credit_card: ^4.0.1
+  flutter_credit_card: ^4.0.1
+
 
 #  Web View
   webview_flutter: ^4.10.0
