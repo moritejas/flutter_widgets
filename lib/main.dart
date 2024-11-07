@@ -8,6 +8,7 @@ import 'Component/Drag Target/drag_target.dart';
 import 'Component/Draggable/draggable.dart';
 import 'Component/Drawer/drawer.dart';
 import 'Component/Dropdown/dropdown.dart';
+import 'Component/End Drawer/end_drawer.dart';
 
 
 void main() {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: DropDownComponent(),
+      home: EndDrawerComponent(),
     );
   }
 }
