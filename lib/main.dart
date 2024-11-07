@@ -6,6 +6,7 @@ import 'Component/Flippable Card/flippable_card.dart';
 import 'Component/Form Validation/form_validation.dart';
 import 'Component/Grid View/grid_view.dart';
 import 'Component/Image/image.dart';
+import 'Component/Index Stack/index_stack.dart';
 
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: ImageComponent(),
+      home: IndexedTagComponent(),
     );
   }
 }
