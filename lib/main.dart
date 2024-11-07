@@ -5,6 +5,7 @@ import 'Component/Flex/flex.dart';
 import 'Component/Flippable Card/flippable_card.dart';
 import 'Component/Form Validation/form_validation.dart';
 import 'Component/Grid View/grid_view.dart';
+import 'Component/Icon/icon.dart';
 
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: GridViewComponent(),
+      home: IconComponent(),
     );
   }
 }
