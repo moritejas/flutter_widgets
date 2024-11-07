@@ -9,6 +9,7 @@ import 'Component/Image/image.dart';
 import 'Component/Index Stack/index_stack.dart';
 import 'Component/Language Selector/language_selector.dart';
 import 'Component/List Tile/listtile.dart';
+import 'Component/List View/list_view.dart';
 
 
 void main() {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: ListTileComponent(),
+      home: ListViewComponent(),
     );
   }
 }
