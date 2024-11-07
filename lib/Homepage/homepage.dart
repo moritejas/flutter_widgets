@@ -160,7 +160,7 @@ class _HomepageState extends State<Homepage> {
               sizedbox(),
               allComponents(name: "Rich Text", page: const RichTextComponent()),
               sizedbox(),
-              allComponents(name: "Circle Image", page: const CilrcleImageComponent()),
+              allComponents(name: "Circle Image", page: const CircleImageComponent()),
               sizedbox(),
               allComponents(name: "Icon", page: const IconComponent()),
               sizedbox(),

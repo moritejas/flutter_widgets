@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'Component/Choice Chip/choice_chip.dart';
-import 'Homepage/homepage.dart';
+// import 'Homepage/homepage.dart';
+import 'Component/Circle Image/circle_image.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: ChoiceChipComponent(),
+      home: CircleImageComponent(),
     );
   }
 }

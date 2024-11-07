@@ -21,16 +21,9 @@ class CardComponent extends StatelessWidget {
           semanticContainer: true, // Whether the card is a semantic container
           child: const Padding(
             padding: EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Card Title',
-                  style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-                ),
-                SizedBox(height: 8.0),
-                Text('Card content goes here.'),
-              ],
+            child: Text(
+              'Card Title',
+              style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
             ),
           ),
         )

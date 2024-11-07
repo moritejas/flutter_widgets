@@ -24,7 +24,6 @@
       @override
       Widget build(BuildContext context) {
         return Scaffold(
-          appBar: AppBar(title: const Text("Audio Player Example")),
           body: Center(child: Column(mainAxisAlignment: MainAxisAlignment.center,
               children: [IconButton(
                   icon: Icon(isPlaying ? Icons.pause : Icons.play_arrow),
