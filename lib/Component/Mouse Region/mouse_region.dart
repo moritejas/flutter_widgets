@@ -8,7 +8,6 @@ class MouseRegionComponent extends StatefulWidget {
 }
 
 class _MouseRegionComponentState extends State<MouseRegionComponent> {
-
   Color _color = Colors.blue;
 
   void _onEnter(PointerEvent details) {
@@ -26,12 +25,14 @@ class _MouseRegionComponentState extends State<MouseRegionComponent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-      ),
+      appBar: AppBar(),
       body: Center(
         child: MouseRegion(
-          onEnter: _onEnter,
-          onExit: _onExit,
+          onEnter: _onEnter, // Triggered when the mouse enters the region
+          onExit: _onExit,   // Triggered when the mouse exits the region
+          onHover: (PointerEvent details) {
+            // Optional: Handle hover event (not used here)
+          },
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 200),
             width: 200,
