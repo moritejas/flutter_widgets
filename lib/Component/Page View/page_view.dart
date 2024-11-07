@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class PageViewComponent extends StatelessWidget {
@@ -10,6 +11,18 @@ class PageViewComponent extends StatelessWidget {
         title: const Text('PageView Example'),
       ),
       body: PageView(
+        scrollDirection: Axis.horizontal, // Default horizontal scroll direction
+        controller: PageController(), // Controller for programmatic control of the PageView
+        physics: const BouncingScrollPhysics(), // Scroll physics, e.g., Bouncing or Clamping
+        reverse: false, // If true, the PageView will reverse the scroll direction
+        onPageChanged: (int page) { // Callback when the page changes
+          print("Page changed to: $page");
+        },
+        pageSnapping: true, // If true, the page will snap to the nearest page on scroll end
+        allowImplicitScrolling: false, // If true, allows implicit scrolling (without dragging)
+        padEnds: true, // If true, leaves space at the start and end of the PageView
+        dragStartBehavior: DragStartBehavior.start, // Determines drag behavior when touching the screen
+        restorationId: "pageView",
         children: [
           Container(
             color: Colors.red,
@@ -38,7 +51,7 @@ class PageViewComponent extends StatelessWidget {
               ),
             ),
           ),
-        ],
+        ], // Restoration ID for saving and restoring the page index
       ),
     );
   }
