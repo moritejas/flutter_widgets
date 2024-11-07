@@ -46,70 +46,77 @@ class Card1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return ExpandableNotifier(
         child: Padding(
-      padding: const EdgeInsets.all(10),
-      child: Card(
-        clipBehavior: Clip.antiAlias,
-        child: Column(
-          children: <Widget>[
-            SizedBox(
-              height: 150,
-              child: Container(
-                decoration: const BoxDecoration(
-                  color: Colors.orange,
-                  shape: BoxShape.rectangle,
-                ),
-              ),
-            ),
-            ScrollOnExpand(
-              scrollOnExpand: true,
-              scrollOnCollapse: false,
-              child: ExpandablePanel(
-                theme: const ExpandableThemeData(
-                  headerAlignment: ExpandablePanelHeaderAlignment.center,
-                  tapBodyToCollapse: true,
-                ),
-                header: Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Text(
-                      "ExpandablePanel",
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    )),
-                collapsed: const Text(
-                  loremIpsum,
-                  softWrap: true,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                expanded: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    for (var _ in Iterable.generate(5))
-                      const Padding(
-                          padding: EdgeInsets.only(bottom: 10),
-                          child: Text(
-                            loremIpsum,
-                            softWrap: true,
-                            overflow: TextOverflow.fade,
-                          )),
-                  ],
-                ),
-                builder: (_, collapsed, expanded) {
-                  return Padding(
-                    padding:
-                        const EdgeInsets.only(left: 10, right: 10, bottom: 10),
-                    child: Expandable(
-                      collapsed: collapsed,
-                      expanded: expanded,
-                      theme: const ExpandableThemeData(crossFadePoint: 0),
+          padding: const EdgeInsets.all(10),
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 150,
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      color: Colors.orange,
+                      shape: BoxShape.rectangle,
                     ),
-                  );
-                },
-              ),
+                  ),
+                ),
+                ScrollOnExpand(
+                  scrollOnExpand: true,
+                  scrollOnCollapse: false,
+                  child: ExpandablePanel(
+                    theme: const ExpandableThemeData(
+                      headerAlignment: ExpandablePanelHeaderAlignment.center,
+                      tapBodyToCollapse: true,
+                    ),
+                    header: Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Text(
+                          "ExpandablePanel",
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        )),
+                    collapsed: const Text(
+                      loremIpsum,
+                      softWrap: true,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    expanded: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        for (var _ in Iterable.generate(5))
+                          const Padding(
+                              padding: EdgeInsets.only(bottom: 10),
+                              child: Text(
+                                loremIpsum,
+                                softWrap: true,
+                                overflow: TextOverflow.fade,
+                              )),
+                      ],
+                    ),
+                    builder: (_, collapsed, expanded) {
+                      return Padding(
+                        padding:
+                        const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                        child: Expandable(
+                          collapsed: collapsed,
+                          expanded: expanded,
+                          theme: const ExpandableThemeData(crossFadePoint: 0),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                const Divider(
+                  height: 30,         // Space around the divider
+                  thickness: 2,       // Thickness of the line
+                  indent: 10,         // Left padding of the divider
+                  endIndent: 10,      // Right padding of the divider
+                  color: Colors.blue, // Color of the divider
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-    ));
+          ),
+        ));
   }
 }
 
@@ -216,56 +223,60 @@ class Card2 extends StatelessWidget {
 
     return ExpandableNotifier(
         child: Padding(
-      padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
-      child: ScrollOnExpand(
-        child: Card(
-          clipBehavior: Clip.antiAlias,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Expandable(
-                collapsed: buildCollapsed1(),
-                expanded: buildExpanded1(),
-              ),
-              Expandable(
-                collapsed: buildCollapsed2(),
-                expanded: buildExpanded2(),
-              ),
-              Expandable(
-                collapsed: buildCollapsed3(),
-                expanded: buildExpanded3(),
-              ),
-              const Divider(
-                height: 1,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+          padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+          child: ScrollOnExpand(
+            child: Card(
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Builder(
-                    builder: (context) {
-                      var controller =
+                  Expandable(
+                    collapsed: buildCollapsed1(),
+                    expanded: buildExpanded1(),
+                  ),
+                  Expandable(
+                    collapsed: buildCollapsed2(),
+                    expanded: buildExpanded2(),
+                  ),
+                  Expandable(
+                    collapsed: buildCollapsed3(),
+                    expanded: buildExpanded3(),
+                  ),
+                  const Divider(
+                    height: 30,
+                    thickness: 2,
+                    indent: 10,
+                    endIndent: 10,
+                    color: Colors.red, // Divider color
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      Builder(
+                        builder: (context) {
+                          var controller =
                           ExpandableController.of(context, required: true)!;
-                      return TextButton(
-                        child: Text(
-                          controller.expanded ? "COLLAPSE" : "EXPAND",
-                          style: Theme.of(context)
-                              .textTheme
-                              .displayLarge!
-                              .copyWith(color: Colors.deepPurple),
-                        ),
-                        onPressed: () {
-                          controller.toggle();
+                          return TextButton(
+                            child: Text(
+                              controller.expanded ? "COLLAPSE" : "EXPAND",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .displayLarge!
+                                  .copyWith(color: Colors.deepPurple),
+                            ),
+                            onPressed: () {
+                              controller.toggle();
+                            },
+                          );
                         },
-                      );
-                    },
+                      ),
+                    ],
                   ),
                 ],
               ),
-            ],
+            ),
           ),
-        ),
-      ),
-    ));
+        ));
   }
 }
 
@@ -291,56 +302,56 @@ class Card3 extends StatelessWidget {
 
     return ExpandableNotifier(
         child: Padding(
-      padding: const EdgeInsets.all(10),
-      child: ScrollOnExpand(
-        child: Card(
-          clipBehavior: Clip.antiAlias,
-          child: Column(
-            children: <Widget>[
-              ExpandablePanel(
-                theme: const ExpandableThemeData(
-                  headerAlignment: ExpandablePanelHeaderAlignment.center,
-                  tapBodyToExpand: true,
-                  tapBodyToCollapse: true,
-                  hasIcon: false,
-                ),
-                header: Container(
-                  color: Colors.indigoAccent,
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Row(
-                      children: [
-                        ExpandableIcon(
-                          theme: const ExpandableThemeData(
-                            expandIcon: Icons.arrow_right,
-                            collapseIcon: Icons.arrow_drop_down,
-                            iconColor: Colors.white,
-                            iconSize: 28.0,
-                            iconRotationAngle: math.pi / 2,
-                            iconPadding: EdgeInsets.only(right: 5),
-                            hasIcon: false,
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(
-                            "Items",
-                            style: Theme.of(context)
-                                .textTheme
-                                .labelMedium!
-                                .copyWith(color: Colors.white),
-                          ),
-                        ),
-                      ],
+          padding: const EdgeInsets.all(10),
+          child: ScrollOnExpand(
+            child: Card(
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                children: <Widget>[
+                  ExpandablePanel(
+                    theme: const ExpandableThemeData(
+                      headerAlignment: ExpandablePanelHeaderAlignment.center,
+                      tapBodyToExpand: true,
+                      tapBodyToCollapse: true,
+                      hasIcon: false,
                     ),
+                    header: Container(
+                      color: Colors.indigoAccent,
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          children: [
+                            ExpandableIcon(
+                              theme: const ExpandableThemeData(
+                                expandIcon: Icons.arrow_right,
+                                collapseIcon: Icons.arrow_drop_down,
+                                iconColor: Colors.white,
+                                iconSize: 28.0,
+                                iconRotationAngle: math.pi / 2,
+                                iconPadding: EdgeInsets.only(right: 5),
+                                hasIcon: false,
+                              ),
+                            ),
+                            Expanded(
+                              child: Text(
+                                "Items",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .labelMedium!
+                                    .copyWith(color: Colors.white),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    collapsed: Container(),
+                    expanded: buildList(),
                   ),
-                ),
-                collapsed: Container(),
-                expanded: buildList(),
+                ],
               ),
-            ],
+            ),
           ),
-        ),
-      ),
-    ));
+        ));
   }
 }
