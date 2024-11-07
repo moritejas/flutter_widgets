@@ -6,6 +6,7 @@ import 'Component/Data Table/data_table.dart';
 import 'Component/Divider/divider.dart';
 import 'Component/Drag Target/drag_target.dart';
 import 'Component/Draggable/draggable.dart';
+import 'Component/Drawer/drawer.dart';
 
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: DraggableComponent(),
+      home: DrawerComponent(),
     );
   }
 }
