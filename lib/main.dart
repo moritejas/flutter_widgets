@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 // import 'Homepage/homepage.dart';
 import 'Component/Credit Card Form/cradit_card_form.dart';
 import 'Component/Data Table/data_table.dart';
+import 'Component/Divider/divider.dart';
 
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: DataTableComponent(),
+      home: DividerComponent(),
     );
   }
 }
