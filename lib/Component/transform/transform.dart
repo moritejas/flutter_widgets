@@ -11,8 +11,10 @@ class TransformComponent extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Translation
-            Transform.translate(
-              offset: const Offset(20.0, 0.0),
+            Transform(
+              transform: Matrix4.identity()..translate(20.0, 0.0),
+              origin: Offset(0, 0),
+              alignment: Alignment.center,
               child: Container(
                 padding: const EdgeInsets.all(8.0),
                 color: Colors.blue,
@@ -24,8 +26,10 @@ class TransformComponent extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             // Rotation
-            Transform.rotate(
-              angle: 0.5, // in radians
+            Transform(
+              transform: Matrix4.identity()..rotateZ(0.5), // in radians
+              origin: Offset(0, 0),
+              alignment: Alignment.center,
               child: Container(
                 padding: const EdgeInsets.all(8.0),
                 color: Colors.green,
@@ -37,8 +41,10 @@ class TransformComponent extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             // Scaling
-            Transform.scale(
-              scale: 1.5,
+            Transform(
+              transform: Matrix4.identity()..scale(1.5, 1.5),
+              origin: Offset(0, 0),
+              alignment: Alignment.center,
               child: Container(
                 padding: const EdgeInsets.all(8.0),
                 color: Colors.red,
@@ -51,12 +57,33 @@ class TransformComponent extends StatelessWidget {
             const SizedBox(height: 20),
             // Skewing
             Transform(
-              transform: Matrix4.skewX(0.3),
+              transform: Matrix4.identity()..setEntry(3, 0, 0.2),
+              origin: Offset(0, 0),
+              alignment: Alignment.center,
               child: Container(
                 padding: const EdgeInsets.all(8.0),
                 color: Colors.purple,
                 child: const Text(
                   'Skewed',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            // Combined transformations
+            Transform(
+              transform: Matrix4.identity()
+                ..translate(10.0, 10.0)
+                ..rotateZ(0.2)
+                ..scale(1.2, 1.2)
+                ..setEntry(3, 0, 0.3),
+              origin: Offset(0, 0),
+              alignment: Alignment.center,
+              child: Container(
+                padding: const EdgeInsets.all(8.0),
+                color: Colors.orange,
+                child: const Text(
+                  'Combined Transformations',
                   style: TextStyle(color: Colors.white),
                 ),
               ),
