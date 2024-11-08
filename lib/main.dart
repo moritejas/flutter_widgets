@@ -12,6 +12,8 @@ import 'Component/Timer/timer.dart';
 import 'Component/Toggle/toggle_icon.dart';
 import 'Component/Tooltip/tooltip.dart';
 import 'Component/Vertical Divider/vertical_divider.dart';
+import 'Component/Video Player/videoplayer.dart';
+import 'Component/Wrap/wrap.dart';
 import 'Component/transform/transform.dart';
 
 
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: VerticalDividerComponent (),
+      home: WrapComponent(),
     );
   }
 }

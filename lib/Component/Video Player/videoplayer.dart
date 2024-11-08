@@ -10,24 +10,26 @@ class VideoPlayerComponent extends StatefulWidget {
 
 class _VideoPlayerComponentState extends State<VideoPlayerComponent> {
   late VideoPlayerController _controller;
+  bool _isMuted = false;
 
   @override
   void initState() {
     super.initState();
-    // Initialize the video player with a sample video
     _controller = VideoPlayerController.network(
-        'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4')
+      'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4',
+      videoPlayerOptions: VideoPlayerOptions(mixWithOthers: true),
+    )
       ..initialize().then((_) {
-        // Ensure the first frame is shown after the video is initialized
-        setState(() {});
-      });
+        setState(() {}); // Refresh the UI once the video is initialized
+      })
+      ..setLooping(true) // Enable looping if desired
+      ..setVolume(1.0); // Set initial volume (1.0 is full volume)
   }
 
   @override
   void dispose() {
-    super.dispose();
-    // Dispose of the controller when the widget is removed
     _controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -43,7 +45,16 @@ class _VideoPlayerComponentState extends State<VideoPlayerComponent> {
               aspectRatio: _controller.value.aspectRatio,
               child: VideoPlayer(_controller),
             ),
-            VideoProgressIndicator(_controller, allowScrubbing: true),
+            const SizedBox(height: 10),
+            VideoProgressIndicator(
+              _controller,
+              allowScrubbing: true,
+              colors: const VideoProgressColors(
+                playedColor: Colors.blue,
+                bufferedColor: Colors.lightBlue,
+                backgroundColor: Colors.grey,
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -61,11 +72,46 @@ class _VideoPlayerComponentState extends State<VideoPlayerComponent> {
                     });
                   },
                 ),
+                IconButton(
+                  icon: Icon(
+                    _isMuted ? Icons.volume_off : Icons.volume_up,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _isMuted = !_isMuted;
+                      _controller.setVolume(_isMuted ? 0 : 1.0);
+                    });
+                  },
+                ),
+                IconButton(
+                  icon: const Icon(Icons.replay_10),
+                  onPressed: () {
+                    final newPosition = _controller.value.position - const Duration(seconds: 10);
+                    _controller.seekTo(newPosition);
+                  },
+                ),
+                IconButton(
+                  icon: const Icon(Icons.forward_10),
+                  onPressed: () {
+                    final newPosition = _controller.value.position + const Duration(seconds: 10);
+                    _controller.seekTo(newPosition);
+                  },
+                ),
               ],
             ),
           ],
         )
             : const CircularProgressIndicator(),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            _controller.value.isPlaying ? _controller.pause() : _controller.play();
+          });
+        },
+        child: Icon(
+          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+        ),
       ),
     );
   }

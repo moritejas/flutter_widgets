@@ -10,159 +10,28 @@ class WrapComponent extends StatelessWidget {
         title: const Text('Wrap Example'),
       ),
       body: Wrap(
-        spacing: 10.0, // space between items
-        runSpacing: 10.0, // space between lines
+        direction: Axis.horizontal,          // Direction of the wrap layout (horizontal or vertical)
+        alignment: WrapAlignment.start,      // Horizontal alignment of children within the wrap
+        spacing: 10.0,                       // Space between items
+        runAlignment: WrapAlignment.start,   // Vertical alignment of each run (row or column)
+        runSpacing: 10.0,                    // Space between rows or columns
+        crossAxisAlignment: WrapCrossAlignment.start,  // Vertical alignment of children within each run
+        textDirection: TextDirection.ltr,    // Text direction (ltr or rtl)
+        verticalDirection: VerticalDirection.down, // Vertical direction of the wrap (down or up)
+        clipBehavior: Clip.none,             // Whether to clip the content (none, hardEdge, antiAlias, etc.)
         children: <Widget>[
-          Container(
-            color: Colors.teal,
-            height: 100,
-            width: 100,
-            child: const Center(
+          for (int i = 1; i <= 15; i++)
+            Container(
+              color: Colors.teal,
+              height: 100,
+              width: 100,
+              child: Center(
                 child: Text(
-              "item 1",
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
-          Container(
-            color: Colors.teal,
-            height: 100,
-            width: 100,
-            child: const Center(
-                child: Text(
-              "item 2",
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
-          Container(
-            color: Colors.teal,
-            height: 100,
-            width: 100,
-            child: const Center(
-                child: Text(
-              "item 3",
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
-          Container(
-            color: Colors.teal,
-            height: 100,
-            width: 100,
-            child: const Center(
-                child: Text(
-              "item 4",
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
-          Container(
-            color: Colors.teal,
-            height: 100,
-            width: 100,
-            child: const Center(
-                child: Text(
-              "item 5",
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
-          Container(
-            color: Colors.teal,
-            height: 100,
-            width: 100,
-            child: const Center(
-                child: Text(
-              "item 6",
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
-          Container(
-            color: Colors.teal,
-            height: 100,
-            width: 100,
-            child: const Center(
-                child: Text(
-              "item 7",
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
-          Container(
-            color: Colors.teal,
-            height: 100,
-            width: 100,
-            child: const Center(
-                child: Text(
-              "item 8",
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
-          Container(
-            color: Colors.teal,
-            height: 100,
-            width: 100,
-            child: const Center(
-                child: Text(
-              "item 9",
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
-          Container(
-            color: Colors.teal,
-            height: 100,
-            width: 100,
-            child: const Center(
-                child: Text(
-              "item 10",
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
-          Container(
-            color: Colors.teal,
-            height: 100,
-            width: 100,
-            child: const Center(
-                child: Text(
-              "item 11",
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
-          Container(
-            color: Colors.teal,
-            height: 100,
-            width: 100,
-            child: const Center(
-                child: Text(
-              "item 12",
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
-          Container(
-            color: Colors.teal,
-            height: 100,
-            width: 100,
-            child: const Center(
-                child: Text(
-              "item 13",
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
-          Container(
-            color: Colors.teal,
-            height: 100,
-            width: 100,
-            child: const Center(
-                child: Text(
-              "item 14",
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
-          Container(
-            color: Colors.teal,
-            height: 100,
-            width: 100,
-            child: const Center(
-                child: Text(
-              "item 15",
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
+                  "item $i",
+                  style: const TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
         ],
       ),
     );
