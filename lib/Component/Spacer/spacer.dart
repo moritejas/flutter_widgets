@@ -15,14 +15,14 @@ class SpacerComponent extends StatelessWidget {
             color: Colors.red,
             child: const Center(child: Text(' Box 1 ')),
           ),
-          const Spacer(), // Adds flexible space
+          const Spacer(flex: 1), // Adds flexible space with flex = 1
           Container(
             height: 100,
             width: 100,
             color: Colors.green,
             child: const Center(child: Text('Box 2')),
           ),
-          const Spacer(flex: 2), // Adds more flexible space
+          const Spacer(flex: 2), // Adds more flexible space with flex = 2
           Container(
             height: 100,
             width: 100,

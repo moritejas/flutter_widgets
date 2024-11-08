@@ -28,21 +28,26 @@ class _RattingBarComponentState extends State<RattingBarComponent> {
             /// flutter_rating_bar: ^4.0.1
 
             RatingBar.builder(
-              // initialRating: _rating,
-              // minRating: 1,
-              // direction: Axis.horizontal,
-              // allowHalfRating: true,
-              // itemCount: 5,
-              // itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
-              itemBuilder: (context, _) => const Icon(
-                Icons.star,
-                color: Colors.amber,
-              ),
+              initialRating: _rating,
+              minRating: 1,
+              direction: Axis.horizontal,
+              allowHalfRating: true,
+              itemCount: 5,
+              itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+              itemSize: 40.0,
+              glow: true,
+              glowColor: Colors.amber,
+              glowRadius: 2.0,
+              updateOnDrag: true,
               onRatingUpdate: (rating) {
                 setState(() {
                   _rating = rating;
                 });
               },
+              itemBuilder: (context, _) => const Icon(
+                Icons.star,
+                color: Colors.amber,
+              ),
             ),
           ],
         ),

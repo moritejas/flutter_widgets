@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:signature/signature.dart';
+import 'dart:typed_data';
 
 class SignatureComponent extends StatefulWidget {
   const SignatureComponent({super.key});
@@ -11,9 +11,16 @@ class SignatureComponent extends StatefulWidget {
 
 class _SignatureComponentState extends State<SignatureComponent> {
   final SignatureController _controller = SignatureController(
-    penStrokeWidth: 5,
-    penColor: Colors.black,
-    // exportBackground: true,
+    penStrokeWidth: 5.0, // Width of the pen strokes
+    penColor: Colors.black, // Color of the pen
+    exportBackgroundColor: Colors.white, // Background color of exported image
+    onDrawStart: () {
+      print('Signature drawing started');
+    }, // Callback when drawing starts
+    onDrawEnd: () {
+      print('Signature drawing ended');
+    }, // Callback when drawing ends
+    exportPenColor: Colors.black, // Color of the pen in exported image
   );
 
   @override
@@ -34,12 +41,12 @@ class _SignatureComponentState extends State<SignatureComponent> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            // Signature widget
+            // Signature widget with all properties
             Signature(
               controller: _controller,
-              width: 300,
-              height: 200,
-              backgroundColor: Colors.grey[200]!,
+              width: 300, // Width of the signature canvas
+              height: 200, // Height of the signature canvas
+              backgroundColor: Colors.grey[200]!, // Canvas background color
             ),
             const SizedBox(height: 20),
             ElevatedButton(
@@ -73,5 +80,11 @@ class _SignatureComponentState extends State<SignatureComponent> {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose(); // Dispose of the controller when done
+    super.dispose();
   }
 }

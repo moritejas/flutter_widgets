@@ -6,9 +6,20 @@ class StackComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text("Stack Widget Example"),
+      ),
       body: Center(
         child: Stack(
+          // Defines the alignment of children within the Stack.
+          // Can be AlignmentDirectional or Alignment.
+          alignment: Alignment.center, // default: AlignmentDirectional.topStart
+
+          // Controls how children that exceed the Stack’s dimensions should be clipped.
+          // Options: Clip.none, Clip.hardEdge, Clip.antiAlias, Clip.antiAliasWithSaveLayer
+          clipBehavior: Clip.hardEdge, // default: Clip.hardEdge
+
+          // Stack children
           children: [
             // Background Image
             Image.network(

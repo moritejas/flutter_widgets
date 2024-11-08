@@ -1,12 +1,7 @@
-import 'package:demo_flutter_flow/Component/Pincode/pincode.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'Component/Markdown/markdown.dart';
-import 'Component/Media Display/media_display.dart';
-import 'Component/Mouse Region/mouse_region.dart';
-import 'Component/PDF Viewer/pdf_viewer.dart';
-import 'Component/Page View/page_view.dart';
-import 'Component/Progress Bar/progreass_bar.dart';
+
+import 'Component/Sticky Header/sticky_header.dart';
 
 
 void main() {
@@ -19,10 +14,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: ProgressBarComponent(),
+      home: SticktHeaderComponent(),
     );
   }
 }
