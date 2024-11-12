@@ -1,11 +1,10 @@
-
 buildscript {
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.4' // Use a compatible version
+        classpath 'com.android.tools.build:gradle:4.2.2' // or '7.0.0'
     }
 }
 

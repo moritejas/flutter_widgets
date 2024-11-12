@@ -8,7 +8,7 @@ class MuxBroadcastComponent extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
       ),
-      body: const Text("This isMuxBroadcast Component")
+      body: const Text("MuxBroadcast is Pending")
     );
   }
 }

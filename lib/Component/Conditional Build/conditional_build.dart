@@ -8,7 +8,7 @@ class ConditionalBuildComponent extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
       ),
-      body:  const Text("This is Conditional Build")
+      body: const Text("Conditional Build is Pending")
     );
   }
 }

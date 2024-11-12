@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_credit_card/flutter_credit_card.dart';
+// import 'package:flutter_credit_card/flutter_credit_card.dart';
 
 class CreditCardFormComponent extends StatefulWidget {
   const CreditCardFormComponent({super.key});
@@ -30,21 +30,21 @@ class _CreditCardFormComponentState extends State<CreditCardFormComponent> {
             children: [
 
               /// Add This dependency : flutter_credit_card: ^4.0.1
-              CreditCardWidget(
-                cardNumber: cardNumber,
-                expiryDate: expirationDate,
-                cardHolderName: cardHolderName,
-                cvvCode: cvvCode,
-                showBackView: isCvvFocused, // true when you want to show CVV
-                cardBgColor: Colors.blueAccent,
-                labelCardHolder: 'Card Holder', // Custom label for the card holder
-                isHolderNameVisible: true,
-                onCreditCardWidgetChange: (CreditCardBrand creditCardBrand) {
-                  // Handle changes in card brand if needed
-                },
-                obscureCardNumber: false, // Obscure the card number if true
-                obscureCardCvv: false, // Obscure the CVV if true
-              ),
+              // CreditCardWidget(
+              //   cardNumber: cardNumber,
+              //   expiryDate: expirationDate,
+              //   cardHolderName: cardHolderName,
+              //   cvvCode: cvvCode,
+              //   showBackView: isCvvFocused, // true when you want to show CVV
+              //   cardBgColor: Colors.blueAccent,
+              //   labelCardHolder: 'Card Holder', // Custom label for the card holder
+              //   isHolderNameVisible: true,
+              //   onCreditCardWidgetChange: (CreditCardBrand creditCardBrand) {
+              //     // Handle changes in card brand if needed
+              //   },
+              //   obscureCardNumber: false, // Obscure the card number if true
+              //   obscureCardCvv: false, // Obscure the CVV if true
+              // ),
               const SizedBox(height: 20),
               Form(
                 key: _formKey,

@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -10,38 +11,98 @@ class YoutubeVideoPlayerComponent extends StatefulWidget {
 
 class _YoutubeVideoPlayerComponentState extends State<YoutubeVideoPlayerComponent> {
   late YoutubePlayerController _controller;
+  final bool isWeb = kIsWeb; // Check if running on web
+
   @override
   void initState() {
     super.initState();
-    // Create a YouTube player controller with the video ID
-    _controller = YoutubePlayerController(
-      initialVideoId: 'dQw4w9WgXcQ', // Replace with your video ID
-      flags: const YoutubePlayerFlags(
-        autoPlay: true, // Auto play when widget is built
-        mute: false,     // Mute video initially
-      ),
-    );
+
+    // Only initialize the controller on non-web platforms
+    if (!isWeb) {
+      _controller = YoutubePlayerController(
+        initialVideoId: 'dQw4w9WgXcQ', // Replace with your video ID
+        flags: const YoutubePlayerFlags(
+          autoPlay: true,
+          mute: false,
+          loop: false, // Optional: Set to true if you want the video to loop
+          forceHD: false, // Optional: Set to true to force HD playback
+          enableCaption: true, // Enable captions if available
+        ),
+      );
+    }
   }
 
   @override
   void dispose() {
-    // Dispose the controller when the widget is removed from the widget tree
-    _controller.dispose();
+    // Dispose controller only on non-web platforms
+    if (!isWeb) {
+      _controller.dispose();
+    }
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
+      appBar: AppBar(
+        title: const Text('YouTube Video Player'),
+      ),
+      body: isWeb
+          ? Center(
+        child: Text(
+          "YouTube player is not supported on the web in this configuration",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 18),
         ),
-      body: Column(
-        children: [
-          YoutubePlayer(
-            controller: _controller,
-            showVideoProgressIndicator: true,
-          ),
-          // Add more UI components below the video player if needed
-        ],
+      )
+          : SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            YoutubePlayer(
+              controller: _controller,
+              showVideoProgressIndicator: true,
+              progressIndicatorColor: Colors.red,
+              onReady: () {
+                _controller.addListener(() {
+                  // Optional: Add additional listeners for playback events
+                });
+              },
+              bottomActions: [
+                CurrentPosition(),
+                ProgressBar(
+                  isExpanded: true,
+                  colors: ProgressBarColors(
+                    playedColor: Colors.red,
+                    handleColor: Colors.redAccent,
+                  ),
+                ),
+                RemainingDuration(),
+                const PlaybackSpeedButton(), // Allows playback speed adjustment
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    onPressed: () => _controller.play(),
+                    child: const Text('Play'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () => _controller.pause(),
+                    child: const Text('Pause'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () => _controller.seekTo(Duration(seconds: 0)),
+                    child: const Text('Restart'),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

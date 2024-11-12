@@ -9,7 +9,7 @@ class StaticMapComponent extends StatelessWidget {
       appBar: AppBar(
       ),
       body: ElevatedButton(onPressed: (){},
-          child: const Text("This is Eleveted Button Component"))
+          child: const Text("Static Map is Pending"))
     );
   }
 }
